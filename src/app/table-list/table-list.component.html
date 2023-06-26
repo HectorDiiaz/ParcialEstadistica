@@ -49,39 +49,39 @@
                                 </th>
                               </thead>
                               <tbody>
-                                  <tr>
+                                  <tr *ngFor="let juego of this.lista">
                                       <td>
-                                          1
-                                      </td>
-                                      <td>
-                                          Dakota Rice
+                                          {{juego.id}}
                                       </td>
                                       <td>
-                                          Niger
+                                          {{juego.titulo}}
                                       </td>
                                       <td>
-                                          Oud-Turnhout
+                                          {{juego.fecha}}
                                       </td>
-                                      <td class="text-primary">
-                                          $36,738
+                                      <td>
+                                          {{juego.empresa}}
                                       </td>
-                                      <td class="text-primary">
-                                        $36,738
+                                      <td>
+                                          {{juego.clasificacion}}
+                                      </td>
+                                      <td>
+                                        {{juego.nresenas}}
                                     </td>
-                                    <td class="text-primary">
-                                        $36,738
+                                    <td>
+                                        {{juego.genero}}
                                     </td>
-                                    <td class="text-primary">
-                                        $36,738
+                                    <td>
+                                        {{juego.vjugado}}
                                     </td>
-                                    <td class="text-primary">
-                                        $36,738
+                                    <td>
+                                        {{juego.npendientes}}
                                     </td>
-                                    <td class="text-primary">
-                                        $36,738
+                                    <td>
+                                       {{juego.ndeseos}}
                                     </td>
-                                    <td class="text-primary">
-                                        $36,738
+                                    <td >
+                                        {{juego.jactivos}}
                                     </td>
                                       <td class="td-actions text-right">
                                         <button mat-raised-button type="button" matTooltip="Eliminar registro" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">

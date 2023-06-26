@@ -8,57 +8,57 @@
                       <p class="card-category">Complete la información para agregar un nuevo Video Juego</p>
                   </div>
                   <div class="card-body">
-                      <form>
+                      <form [formGroup]="formulario" (ngSubmit)="guardarJuego()">
                           <div class="row">
                               <div class="col-md-5">
                                 <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Titulo" type="text" required>
+                                    <input formControlName="titulo" [(ngModel)]="juego.titulo" matInput placeholder="Titulo" type="text" [value]="this.juego.titulo" required>
                                   </mat-form-field>
                               </div>
                               <div class="col-md-3">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Fecha de lanzamiento" type="date" required>
+                                    <input formControlName="fecha" [(ngModel)]="this.juego.fecha" matInput placeholder="Fecha de lanzamiento" type="date" required>
                                   </mat-form-field>
                               </div>
                               <div class="col-md-4">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Empresa desarrolladora" type="text" required>
+                                    <input formControlName="empresa" [(ngModel)]="this.juego.empresa" matInput placeholder="Empresa desarrolladora" type="text" required>
                                   </mat-form-field>
                               </div>
                           </div>
                           <div class="row">
                               <div class="col-md-6">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Clasificación" type="text" required>
+                                  <input formControlName="clasificacion" [(ngModel)]="this.juego.clasificacion" matInput placeholder="Clasificación" type="text" required>
                                 </mat-form-field>
                               </div>
                               <div class="col-md-6">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Numero de reseñas" type="number" required>
+                                  <input formControlName="nresenas" [(ngModel)]="this.juego.nresenas" matInput placeholder="Numero de reseñas" type="number" required>
                                 </mat-form-field>
                               </div>
                           </div>
                           <div class="row">
                               <div class="col-md-12">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Generos" type="text" required>
+                                  <input formControlName="genero" [(ngModel)]="this.juego.genero" matInput placeholder="Generos" type="text" required>
                                 </mat-form-field>
                               </div>
                           </div>
                           <div class="row">
                               <div class="col-md-4">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Veces jugado" type="number" required>
+                                  <input formControlName="vjugado" [(ngModel)]="this.juego.vjugado" matInput placeholder="Veces jugado" type="number" required>
                                 </mat-form-field>
                               </div>
                               <div class="col-md-4">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Jugadores activos" type="Number" required>
+                                  <input formControlName="npendientes" [(ngModel)]="this.juego.npendientes" matInput placeholder="Jugadores activos" type="Number" required>
                                 </mat-form-field>
                               </div>
                               <div class="col-md-4">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Lista de pendientes" type="number" required>
+                                  <input formControlName="ndeseos" [(ngModel)]="this.juego.ndeseos" matInput placeholder="Lista de pendientes" type="number" required>
                                 </mat-form-field>
                               </div>
                           </div>
@@ -66,11 +66,11 @@
                           <div class="row">
                             <div class="col-md-4">
                               <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Lisa de deseos" type="number" required>
+                                <input formControlName="jactivos" [(ngModel)]="this.juego.jactivos" matInput placeholder="Lisa de deseos" type="number" required>
                               </mat-form-field>
                             </div>
                           </div>
-                          <button mat-raised-button type="submit" class="btn btn-danger pull-right">Agregar</button>
+                          <button  mat-raised-button type="submit" class="btn btn-danger pull-right">Agregar</button>
                           <div class="clearfix"></div>
                       </form>
                   </div>

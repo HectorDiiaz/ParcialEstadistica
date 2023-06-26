@@ -18,6 +18,7 @@ export class TableListComponent implements OnInit {
     this.serviceJuegos.getGames().subscribe(
       (juegos: Juego[]) => {
         console.log(juegos);
+        this.lista= juegos;
       },
       (error: any) => {
         console.log('Error al obtener las construcciones:', error);

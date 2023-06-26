@@ -7,7 +7,7 @@ import { throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class VideoJuegosServiceService {
-  private baseUrl:string = "http://estadistica.icoders.com/api/api.php"
+  private baseUrl:string = "http://estadistica.icoders.com.co/api/api.php"
   constructor(private http:HttpClient) { }
 
 
@@ -26,6 +26,8 @@ export class VideoJuegosServiceService {
 
     insertGame(juego: Juego): Observable<any> {
       const url = this.baseUrl;
+      console.log("JUEGO:",juego);
+      
       const header = new HttpHeaders().set('Content-Type', 'application/json');
       header.append('Access-Control-Allow-Origin', 'http://localhost');
       return this.http.post(url, juego, { headers: header }).pipe(
