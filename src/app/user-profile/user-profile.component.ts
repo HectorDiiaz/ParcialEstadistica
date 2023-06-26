@@ -24,37 +24,37 @@ export class UserProfileComponent implements OnInit {
     jactivos: 0
   };
   formulario: FormGroup;
-  constructor(private service:VideoJuegosServiceService
+  constructor(private service:VideoJuegosServiceService,
     private formBuilder: FormBuilder) {
-    this.formulario = new FormGroup({
-      titulo: new FormControl('', Validators.required),
-      fecha: new FormControl('', Validators.required),
-      empresa: new FormControl('', Validators.required),
-      clasificacion: new FormControl('', Validators.required),
-      nresenas: new FormControl('', Validators.required),
-      genero: new FormControl('', Validators.required),
-      vjugando: new FormControl('', Validators.required),
-      npendientes: new FormControl('', Validators.required),
-      ndeseos: new FormControl('', Validators.required),
-      jactivos: new FormControl('', Validators.required),
-      // Otros campos del formulario
-    }); 
+    // this.formulario = new FormGroup({
+    //   titulo: new FormControl('', Validators.required),
+    //   fecha: new FormControl('', Validators.required),
+    //   empresa: new FormControl('', Validators.required),
+    //   clasificacion: new FormControl('', Validators.required),
+    //   nresenas: new FormControl('', Validators.required),
+    //   genero: new FormControl('', Validators.required),
+    //   vjugando: new FormControl('', Validators.required),
+    //   npendientes: new FormControl('', Validators.required),
+    //   ndeseos: new FormControl('', Validators.required),
+    //   jactivos: new FormControl('', Validators.required),
+    //   // Otros campos del formulario
+    // }); 
     
   }
 
   ngOnInit() { 
   }
 
-  submitForm() {
-    if (this.myForm.valid) {
-      // El formulario es válido, puedes enviar los datos
-      this.guardarJuego()
-      console.log(this.myForm.value);
-    } else {
-      // El formulario no es válido, muestra mensajes de error o realiza acciones adicionales
-      console.log('Formulario incompleto');
-    }
-  }
+  // submitForm() {
+  //   if (this.myForm.valid) {
+  //     // El formulario es válido, puedes enviar los datos
+  //     this.guardarJuego()
+  //     console.log(this.myForm.value);
+  //   } else {
+  //     // El formulario no es válido, muestra mensajes de error o realiza acciones adicionales
+  //     console.log('Formulario incompleto');
+  //   }
+  // }
   
   guardarJuego(){
 
